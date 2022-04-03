@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
-import UltimosLanzamientos from "./components/UltimosLanzamientos";    
+import Estrenos from "./components/Estrenos";    
 import PeliculasPopulares from "./components/PeliculasPopulares"
 import Buscador from "./components/Buscador";
 import Nav from "./components/Nav";
@@ -13,7 +13,7 @@ const App = () => {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/ultimos-lanzamientos" element={<UltimosLanzamientos />} />
+        <Route path="/estrenos" element={<Estrenos />} />
         <Route path="/populares" element={<PeliculasPopulares />} />
         <Route path="/buscador" element={<Buscador />} />
       </Routes>
