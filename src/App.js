@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import UltimosLanzamientos from "./components/UltimosLanzamientos";    
+import PeliculasPopulares from "./components/PeliculasPopulares"
+import Buscador from "./components/Buscador";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/ultimos-lanzamientos" element={<UltimosLanzamientos />} />
+        <Route path="/populares" element={<PeliculasPopulares />} />
+        <Route path="/buscador" element={<Buscador />} />
+      </Routes>
+      <Footer/>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
