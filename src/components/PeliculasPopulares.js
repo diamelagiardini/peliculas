@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 
 
 const PeliculasPopulares = () => {
-    const [peliculasPopulares, setPeliculasPopulares] = useState([])
+    const [PeliculasPopulares, setPeliculasPopulares] = useState([])
     useEffect(() => {
         fetch("https://api.themoviedb.org/3/movie/popular?api_key=d2db916ed787e45a269779c746706c07&language=en-US")
         .then(res => res.json())
@@ -11,7 +11,7 @@ const PeliculasPopulares = () => {
 
     return (
         <div className="flex-wrap centrado">
-            {peliculasPopulares.map(pelicula => 
+            {PeliculasPopulares.map(pelicula => 
             <div className="tarjeta margen-tarjetas centrado-columnas">
                 <div>
                     <img className="tarjeta-imagen" src= {`https://image.tmdb.org/t/p/original/${pelicula.poster_path}`} alt=""></img>

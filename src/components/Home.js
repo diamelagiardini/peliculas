@@ -1,7 +1,51 @@
+import { useState, useEffect } from "react";
 const Home = () => {
-    return (
-        <h1>Soy Home</h1>
+  const [topPeliculas, setTopPeliculas] = useState([]);
+  useEffect(() => {
+    fetch(
+      "https://api.themoviedb.org/3/movie/top_rated?api_key=d2db916ed787e45a269779c746706c07&language=en-US"
     )
-}
+      .then((res) => res.json())
+      .then((data) => setTopPeliculas(data.results));
+  }, []);
 
-export default Home
+  const [PeliculasActuales, setPeliculasActuales] = useState([]);
+  useEffect(() => {
+    fetch(
+      "https://api.themoviedb.org/3/movie/now_playing?api_key=d2db916ed787e45a269779c746706c07&language=en-US"
+    )
+      .then((res) => res.json())
+      .then((data) => setPeliculasActuales(data.results));
+  }, []);
+  return (
+    <div className="centrado flex-wrap">
+      <div className="panel-home margen-tarjetas">
+        <div className="titulo-panel">TOP PELICULAS</div>
+        <div>
+          {topPeliculas.map((pelicula) => (
+            <div className="flex space-between items-panel-home">
+              <p>{pelicula.title}</p>
+              <p>+</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div></div>
+
+      <div className="panel-home margen-tarjetas">
+        <div className="titulo-panel">PELICULAS ACTUALES</div>
+        <div>
+          {PeliculasActuales.map((pelicula) => (
+            <div className="flex space-between items-panel-home">
+              <p>{pelicula.title}</p>
+              <p>+</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div></div>
+    </div>
+  );
+};
+
+export default Home;

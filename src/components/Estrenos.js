@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 
 const Estrenos = () => {
 
-    const [Estrenos, setEstrenos] = useState([])
+    const [Estrenos, setEstrenos] = useState([]);
     useEffect(() => {
         fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=d2db916ed787e45a269779c746706c07&language=en-US")
         .then(res => res.json())
