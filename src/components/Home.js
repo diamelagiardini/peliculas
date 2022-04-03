@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { Carousel } from "antd";
+
 const Home = () => {
   const [topPeliculas, setTopPeliculas] = useState([]);
   useEffect(() => {
@@ -18,6 +20,8 @@ const Home = () => {
       .then((data) => setPeliculasActuales(data.results));
   }, []);
   return (
+    <>
+    <Carousel/>
     <div className="centrado flex-wrap">
       <div className="panel-home margen-tarjetas">
         <div className="titulo-panel">TOP PELICULAS</div>
@@ -45,6 +49,8 @@ const Home = () => {
       </div>
       <div></div>
     </div>
+    
+    </>
   );
 };
 
