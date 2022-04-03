@@ -17,7 +17,7 @@ const PeliculasPopulares = () => {
                     <img className="tarjeta-imagen" src= {`https://image.tmdb.org/t/p/original/${pelicula.poster_path}`} alt=""></img>
                 </div>
                 <div><h3 className="tarjeta-titulo">{pelicula.title}</h3></div>
-                <div><button>Mas info</button></div>
+                <div><button className="tarjeta-boton">Mas info</button></div>
             </div>)}
         </div>
     )
