@@ -4,7 +4,7 @@ import Estrenos from "./components/Estrenos";
 import PeliculasPopulares from "./components/PeliculasPopulares"
 import Buscador from "./components/Buscador";
 import Nav from "./components/Nav";
-import Footer from "./components/Footer";
+import DetallePelicula from "./components/DetallePelicula"
 import "./App.css";
 
 const App = () => {
@@ -13,11 +13,14 @@ const App = () => {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/top/:idPelicula" element={<DetallePelicula/>}/>
+        <Route path="/actuales/:idPelicula" element={<DetallePelicula/>}/>
         <Route path="/estrenos" element={<Estrenos />} />
+        <Route path="/estrenos/:idPelicula" element={<DetallePelicula/>}/>
         <Route path="/populares" element={<PeliculasPopulares />} />
+        <Route path="/populares/:idPelicula" element={<DetallePelicula/>}/>
         <Route path="/buscador" element={<Buscador />} />
       </Routes>
-      <Footer/>
     </BrowserRouter>
   );
 };

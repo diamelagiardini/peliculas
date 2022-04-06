@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Carousel } from "antd";
+import { Link } from "react-router-dom";
+import Footer from "./Footer"
 
 const Home = () => {
   const [topPeliculas, setTopPeliculas] = useState([]);
@@ -21,7 +22,6 @@ const Home = () => {
   }, []);
   return (
     <>
-    <Carousel/>
     <div className="centrado flex-wrap">
       <div className="panel-home margen-tarjetas">
         <div className="titulo-panel">TOP PELICULAS</div>
@@ -29,7 +29,7 @@ const Home = () => {
           {topPeliculas.map((pelicula) => (
             <div className="flex space-between items-panel-home">
               <p>{pelicula.title}</p>
-              <p>+</p>
+              <Link to={`/top/${pelicula.id}`}><p className="panel-mas-info">info</p></Link>
             </div>
           ))}
         </div>
@@ -42,14 +42,14 @@ const Home = () => {
           {PeliculasActuales.map((pelicula) => (
             <div className="flex space-between items-panel-home">
               <p>{pelicula.title}</p>
-              <p>+</p>
+              <Link to={`/actuales/${pelicula.id}`}><p className="panel-mas-info">info</p></Link>
             </div>
           ))}
         </div>
       </div>
       <div></div>
     </div>
-    
+    <Footer/>
     </>
   );
 };

@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@300;400;500&display=swap");
 
 * {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
-body{
- background-color: #F2C301;
+body {
+  background-color: #f2c301;
 }
 .App {
   text-align: center;
@@ -46,11 +46,11 @@ body{
   }
 }
 
-.flex{
+.flex {
   display: flex;
 }
 
-.space-between{
+.space-between {
   justify-content: space-between;
 }
 
@@ -59,14 +59,14 @@ body{
   flex-wrap: wrap;
 }
 
-.centrado-columnas{
+.centrado-columnas {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
 
-.centrado-footer{
+.centrado-footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,11 +79,11 @@ body{
   justify-content: center;
 }
 
-.margen-tarjetas{
-margin: 20px;
+.margen-tarjetas {
+  margin: 20px;
 }
 
-.tarjeta{
+.tarjeta {
   background-color: white;
   border: 2px solid grey;
   border-radius: 10px;
@@ -92,54 +92,52 @@ margin: 20px;
   transition: 0.3s;
 }
 
-.tarjeta:hover{
+.tarjeta:hover {
   transform: translateY(-10px);
   cursor: pointer;
-  border: 2px solid #1F2633;
+  border: 2px solid #1f2633;
 }
 
-.tarjeta-imagen{
+.tarjeta-imagen {
   width: 300px;
   border-radius: 10px;
 }
 
-.tarjeta-titulo{
+.tarjeta-titulo {
   max-width: 250px;
 }
 
-.tarjeta-boton{
-background-color:#1F2633 ;
-padding: 10px;
-border:none;
-border-radius: 25px;
-color: white;
+.tarjeta-boton {
+  background-color: #1f2633;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  color: white;
 }
 
-.tarjeta-boton:hover{
+.tarjeta-boton:hover {
   cursor: pointer;
 }
 
-
-.nav{
-  background-color: #1F2633;
+.nav {
+  background-color: #1f2633;
   height: 100px;
-  
 }
 
-.nav-items{
+.nav-items {
   color: white;
   text-decoration: none;
-  margin: 10px;
+  margin: 15px;
   font-size: 20px;
-  
 }
 
-.footer{
-  background-color: #1F2633;
+.footer {
+  background-color: #1f2633;
   height: 100px;
 }
 
-.footer, a {
+.footer,
+a {
   color: white;
   text-decoration: none;
   margin: 10px;
@@ -149,23 +147,49 @@ color: white;
   font-size: 25px;
 }
 
-.panel-home{
+.panel-home {
   background-color: white;
   border: 2px solid grey;
   border-radius: 10px;
   padding: 5px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  width: 340px;
+  width: 400px;
   height: 500px;
   overflow: scroll;
 }
 
-.items-panel-home{
+.items-panel-home {
   border-top: 1px solid grey;
 }
 
-.titulo-panel{
- background-color: #1F2633;
- color: white;
- padding: 10px;
+.titulo-panel {
+  background-color: #1f2633;
+  color: white;
+  padding: 10px;
+}
+
+.fondo-detalle-tarjeta {
+  width: 100%;
+  max-height: 1000px;
+  position: absolute;
+  top: 100;
+  left: 0;
+  opacity: 0.7;
+  overflow: hidden;
+}
+
+.tamanio-imagen-detalle {
+  width: 500px;
+}
+
+.tamanio-descripcion-detalle {
+  max-width: 700px;
+}
+
+.relative {
+  position: relative;
+}
+
+.panel-mas-info{
+  color: #1f2633;
 }
