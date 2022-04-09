@@ -5,7 +5,7 @@ const PeliculasPopulares = () => {
   const [PeliculasPopulares, setPeliculasPopulares] = useState([]);
   useEffect(() => {
     fetch(
-      "https://api.themoviedb.org/3/movie/popular?api_key=d2db916ed787e45a269779c746706c07&language=en-US"
+      "https://api.themoviedb.org/3/movie/popular?api_key=d2db916ed787e45a269779c746706c07&language=es-ES"
     )
       .then((res) => res.json())
       .then((data) => setPeliculasPopulares(data.results));

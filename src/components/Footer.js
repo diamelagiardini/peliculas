@@ -1,10 +1,12 @@
+import { FiTwitter, FiGithub, FiLinkedin } from "react-icons/fi";
+
 const Footer = () => {
     return (
         <footer className="footer centrado-footer">
         <div>
-            <a href="https://github.com/diamelagiardini">GitHub</a>
-            <a href="https://www.linkedin.com/in/diamelagiardini/">Linkedin</a>
-            <a href="https://twitter.com/diame_gi">Twitter</a>
+            <a className="redes github" href="https://github.com/diamelagiardini"><FiGithub/></a>
+            <a className="redes linkedin" href="https://www.linkedin.com/in/diamelagiardini/"><FiLinkedin/></a>
+            <a className="redes twitter" href="https://twitter.com/diame_gi"><FiTwitter/></a>
         </div>
             
 

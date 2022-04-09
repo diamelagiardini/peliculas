@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { FiArrowRight } from "react-icons/fi";
 import Footer from "./Footer"
 
 const Home = () => {
   const [topPeliculas, setTopPeliculas] = useState([]);
   useEffect(() => {
     fetch(
-      "https://api.themoviedb.org/3/movie/top_rated?api_key=d2db916ed787e45a269779c746706c07&language=en-US"
+      "https://api.themoviedb.org/3/movie/top_rated?api_key=d2db916ed787e45a269779c746706c07&language=es-ES"
     )
       .then((res) => res.json())
       .then((data) => setTopPeliculas(data.results));
@@ -29,7 +30,7 @@ const Home = () => {
           {topPeliculas.map((pelicula) => (
             <div className="flex space-between items-panel-home">
               <p>{pelicula.title}</p>
-              <Link to={`/top/${pelicula.id}`}><p className="panel-mas-info">info</p></Link>
+              <Link to={`/top/${pelicula.id}`}><p className="panel-mas-info"><FiArrowRight/></p></Link>
             </div>
           ))}
         </div>
@@ -42,7 +43,7 @@ const Home = () => {
           {PeliculasActuales.map((pelicula) => (
             <div className="flex space-between items-panel-home">
               <p>{pelicula.title}</p>
-              <Link to={`/actuales/${pelicula.id}`}><p className="panel-mas-info">info</p></Link>
+              <Link to={`/actuales/${pelicula.id}`}><p className="panel-mas-info"><FiArrowRight/></p></Link>
             </div>
           ))}
         </div>

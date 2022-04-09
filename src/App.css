@@ -129,18 +129,54 @@ body {
   text-decoration: none;
   margin: 15px;
   font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  transition: 0.3s;
+}
+
+.nav-items:hover {
+  background-color: white;
+  color: #1f2633;
+  padding-top: 20px;
+  padding-bottom: 50px;
 }
 
 .footer {
   background-color: #1f2633;
-  height: 100px;
+  height: 150px;
 }
 
 .footer,
 a {
   color: white;
   text-decoration: none;
-  margin: 10px;
+  padding: 10px;
+}
+
+.redes {
+  display: inline-block;
+  animation: float 5s ease-in-out infinite;
+  font-size: 25px;
+}
+
+.linkedin {
+  animation-delay: 1s;
+}
+
+.twitter {
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .pochoclo {
@@ -190,6 +226,14 @@ a {
   position: relative;
 }
 
-.panel-mas-info{
+.panel-mas-info {
   color: #1f2633;
+}
+
+.input-busqueda {
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  width: 300px;
+  margin-top: 25px;
 }
