@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";
-import Footer from "./Footer"
+import Footer from "./Footer";
+import Carrousel from "./Carrousel";
 
 const Home = () => {
   const [topPeliculas, setTopPeliculas] = useState([]);
@@ -23,34 +24,44 @@ const Home = () => {
   }, []);
   return (
     <>
-    <div className="centrado flex-wrap">
-      <div className="panel-home margen-tarjetas">
-        <div className="titulo-panel">TOP PELICULAS</div>
-        <div>
-          {topPeliculas.map((pelicula) => (
-            <div className="flex space-between items-panel-home">
-              <p>{pelicula.title}</p>
-              <Link to={`/top/${pelicula.id}`}><p className="panel-mas-info"><FiArrowRight/></p></Link>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div></div>
+      <Carrousel />
 
-      <div className="panel-home margen-tarjetas">
-        <div className="titulo-panel">PELICULAS ACTUALES</div>
-        <div>
-          {PeliculasActuales.map((pelicula) => (
-            <div className="flex space-between items-panel-home">
-              <p>{pelicula.title}</p>
-              <Link to={`/actuales/${pelicula.id}`}><p className="panel-mas-info"><FiArrowRight/></p></Link>
-            </div>
-          ))}
+      <div className="componentes-home centrado flex-wrap">
+        <div className="panel-home margen-tarjetas">
+          <div className="titulo-panel">TOP PELICULAS</div>
+          <div>
+            {topPeliculas.map((pelicula) => (
+              <div className="flex space-between items-panel-home">
+                <p>{pelicula.title}</p>
+                <Link to={`/top/${pelicula.id}`}>
+                  <p className="panel-mas-info">
+                    <FiArrowRight />
+                  </p>
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
+        <div></div>
+
+        <div className="panel-home margen-tarjetas">
+          <div className="titulo-panel">PELICULAS ACTUALES</div>
+          <div>
+            {PeliculasActuales.map((pelicula) => (
+              <div className="flex space-between items-panel-home">
+                <p>{pelicula.title}</p>
+                <Link to={`/actuales/${pelicula.id}`}>
+                  <p className="panel-mas-info">
+                    <FiArrowRight />
+                  </p>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div></div>
       </div>
-      <div></div>
-    </div>
-    <Footer/>
+      <Footer />
     </>
   );
 };
