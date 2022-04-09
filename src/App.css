@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #f2c301;
+  background-color: #1F2633;
 }
 .App {
   text-align: center;
@@ -121,7 +121,7 @@ body {
 
 .nav {
   background-color: #1f2633;
-  height: 100px;
+  height: 130px;
 }
 
 .nav-items {
@@ -246,3 +246,31 @@ a {
   margin-top: 35px;
 }
 
+@media (max-width: 1000px) {
+ .panel-home{
+   width: 300px;
+ }
+
+ .componentes-home{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+
+.nav-items {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+  font-size: 16px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition: 0.3s;
+}
+  }
+
+  @media (max-width: 360px) {
+    .mav-items {
+      font-size: 14px;
+    }
+  }
