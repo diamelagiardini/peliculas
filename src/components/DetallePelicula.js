@@ -19,7 +19,7 @@ const DetallePelicula = () => {
       <div className="fondo-detalle-tarjeta">
         <img
           src={`https://image.tmdb.org/t/p/original/${pelicula.backdrop_path}`}
-          alt=""
+          alt={`imagen de ${pelicula.title}`}
         ></img>
       </div>
 
@@ -27,7 +27,7 @@ const DetallePelicula = () => {
         <div className="margen-tarjetas" >
           <img className="tamanio-imagen-detalle"
             src={`https://image.tmdb.org/t/p/original/${pelicula.poster_path}`}
-            alt=""
+            alt={`imagen de ${pelicula.title}`}
           ></img>
         </div>
 

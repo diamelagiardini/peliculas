@@ -28,7 +28,7 @@ const Carrousel = () => {
           <div className="carrousel-home centrado">
             <img
               src={`https://image.tmdb.org/t/p/original/${pelicula.backdrop_path}`}
-              alt=""
+              alt={`imagen de ${pelicula.title}`}
             />
           </div>
         ))}

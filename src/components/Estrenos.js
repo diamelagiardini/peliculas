@@ -19,7 +19,7 @@ const Estrenos = () => {
             <img
               className="tarjeta-imagen"
               src={`https://image.tmdb.org/t/p/original/${pelicula.poster_path}`}
-              alt=""
+              alt={`imagen de ${pelicula.title}`}
             ></img>
           </div>
           <div>
