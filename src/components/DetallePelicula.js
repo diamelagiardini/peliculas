@@ -13,7 +13,7 @@ const DetallePelicula = () => {
     )
       .then((res) => res.json())
       .then((data) => setPelicula(data));
-  }, []);
+  },);
   return (
     <>
       <div className="fondo-detalle-tarjeta">
