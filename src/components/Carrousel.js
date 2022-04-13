@@ -26,7 +26,7 @@ const Carrousel = () => {
       >
         {PeliculasActuales.map((pelicula) => (
           <div className="carrousel-home centrado">
-            <img
+            <img className="carrousel-imagen"
               src={`https://image.tmdb.org/t/p/original/${pelicula.backdrop_path}`}
               alt={`imagen de ${pelicula.title}`}
             />
