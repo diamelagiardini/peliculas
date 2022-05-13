@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Estrenos = () => {
+  // camelcase, esto no deberia estar en mayuscula
   const [Estrenos, setEstrenos] = useState([]);
   useEffect(() => {
     fetch(

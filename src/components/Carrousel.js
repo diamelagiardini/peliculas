@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useState } from "react";
 
 const Carrousel = () => {
+  // usá camelCase, esta variable no deberia empezar en mayuscula
   const [PeliculasActuales, setPeliculasActuales] = useState([]);
   useEffect(() => {
     fetch(

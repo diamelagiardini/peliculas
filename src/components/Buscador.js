@@ -28,6 +28,8 @@ const Buscador = () => {
   return (
     <>
       <div className="centrado">
+        {/* Como hace el usuario con lector de pantalla para saber qué hace este input? 
+        Recordá agregar label o aria-label a estos elementos.  */}
         <input
           className="input-busqueda"
           placeholder="Que pelicula estas buscando?"

@@ -5,6 +5,7 @@ const DetallePelicula = () => {
   const params = useParams();
   const [pelicula, setPelicula] = useState([]);
 
+  // no dejes console log
   console.log(params.idPelicula);
 
   useEffect(() => {

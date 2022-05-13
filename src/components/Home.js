@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import Carrousel from "./Carrousel";
 
 const Home = () => {
+  // no necesitas hacer dos use useEffect, uno solo puede tener los dos fetch
   const [topPeliculas, setTopPeliculas] = useState([]);
   useEffect(() => {
     fetch(
