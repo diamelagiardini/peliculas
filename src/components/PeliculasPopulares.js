@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const PeliculasPopulares = () => {
+  // camelcase!!
   const [PeliculasPopulares, setPeliculasPopulares] = useState([]);
   useEffect(() => {
     fetch(

@@ -7,10 +7,11 @@
 body {
   background-color: #1f2633;
 }
+
 .App {
   text-align: center;
 }
-
+/* Estos estilos son los que trae por defecto Create React App, deberias borrarlos.  */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
